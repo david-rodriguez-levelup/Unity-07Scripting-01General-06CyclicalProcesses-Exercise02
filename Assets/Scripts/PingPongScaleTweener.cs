@@ -10,7 +10,7 @@ using UnityEngine;
 public class PingPongScaleTweener : BaseTweener // TODO: Rename to ColorTweener!
 {
 
-    #region Fields/Properties
+    #region Variables
 
     [SerializeField]
     [Tooltip("Scale multiplier to calculate the object's scale in the middle of the ping-pong interpolation.")]

@@ -132,12 +132,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 128114829}
-  - component: {fileID: 128114828}
-  - component: {fileID: 128114827}
-  - component: {fileID: 128114826}
   - component: {fileID: 128114825}
   - component: {fileID: 128114830}
   - component: {fileID: 128114831}
+  - component: {fileID: 128114828}
+  - component: {fileID: 128114827}
+  - component: {fileID: 128114826}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -157,11 +157,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d863bcecc7a35c441bcb8bce39067924, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stepDuration: 2
+  _pauseBetweenLoops: 0
   _values:
   - {r: 1, g: 0, b: 0, a: 1}
-  - {r: 0, g: 0.7320928, b: 0.9811321, a: 1}
-  - {r: 0.88987577, g: 1, b: 0, a: 1}
-  _transition: 2
+  - {r: 0, g: 1, b: 0, a: 1}
+  - {r: 0, g: 0, b: 1, a: 1}
 --- !u!135 &128114826
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -250,11 +251,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6a0ff701fff6a34ea4d542ed62fc03f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stepDuration: 2
+  _pauseBetweenLoops: 0
   _values:
   - {x: 4, y: 0, z: 0}
   - {x: 0, y: 4, z: 0}
   - {x: -4, y: 0, z: 0}
-  _transition: 2
 --- !u!114 &128114831
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -267,9 +269,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c74e0b5be168404996fdf4137d730f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _loops: 3
-  _scaleMultiplier: 2
-  _transition: 1
+  _stepDuration: 1
+  _pauseBetweenLoops: 6
+  _scaleMultiplier: 1.5
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0

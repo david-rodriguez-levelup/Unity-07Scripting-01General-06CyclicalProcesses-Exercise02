@@ -70,7 +70,7 @@ public abstract class BaseTweener<T> : MonoBehaviour
             {
                 Loops++;
                 index = 0;
-                // If there is a pause between loops, then wait for N seconds 'til resume corroutine.
+                // If there is a pause between loops, then wait for N seconds 'til resume coroutine.
                 if (_pauseBetweenLoops > 0f)
                 {
                     yield return new WaitForSeconds(_pauseBetweenLoops);

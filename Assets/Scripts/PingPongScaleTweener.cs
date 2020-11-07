@@ -25,7 +25,7 @@ public class PingPongScaleTweener : BaseTweener<Vector3>
         return transform.position;
     }
 
-    protected override List<Vector3> GetValues()
+    protected override List<Vector3> GetSteps()
     {
         /// Create the list of values from <see cref="_scaleMultiplier"/>.
         var values = new List<Vector3>

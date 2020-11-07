@@ -15,7 +15,7 @@ public class ColorTweener : BaseTweener<Color>
 
     [SerializeField]
     [Tooltip("List of ordered color steps to interpolate each loop.")]
-    private List<Color> _values;
+    private List<Color> _steps;
 
     // Renderer component in the GameObject.
     private Renderer _renderer;
@@ -38,9 +38,9 @@ public class ColorTweener : BaseTweener<Color>
         return _renderer.material.color;
     }
 
-    protected override List<Color> GetValues()
+    protected override List<Color> GetSteps()
     {
-        return _values;
+        return _steps;
     }
 
     protected override void DoLerp(Color startValue, Color endValue, float stepRatio)

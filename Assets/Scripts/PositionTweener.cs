@@ -13,7 +13,7 @@ public class PositionTweener : BaseTweener<Vector3>
 
     [SerializeField]
     [Tooltip("List of ordered position steps to interpolate each loop.")]
-    private List<Vector3> _values;
+    private List<Vector3> _steps;
 
     #endregion
 
@@ -24,9 +24,9 @@ public class PositionTweener : BaseTweener<Vector3>
         return transform.position;
     }
 
-    protected override List<Vector3> GetValues()
+    protected override List<Vector3> GetSteps()
     {
-        return _values;
+        return _steps;
     }
 
     protected override void DoLerp(Vector3 startValue, Vector3 endValue, float stepRatio)

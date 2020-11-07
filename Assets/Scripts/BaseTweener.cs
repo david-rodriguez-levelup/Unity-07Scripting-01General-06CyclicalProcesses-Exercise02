@@ -6,7 +6,7 @@ using UnityEngine;
 /// Abstract base class for all step-based tweeners.
 /// Starts a corroutine that helps with the execution of lerp functions in the subclasses.
 /// Keeps a counter with the number of loops completed since the script started. See <see cref="Loops"/>.
-/// Each subclass is responsible to return its list of values to interpolate. See <see cref="GetValues"/>
+/// Each subclass is responsible to return its list of values to interpolate. See <see cref="GetSteps"/>
 /// A step is defined by an interpolation between to values.
 /// A loop is completed each time the list of steps is traversed.
 /// <see cref="ColorTweener"/>.
@@ -32,7 +32,7 @@ public abstract class BaseTweener<T> : MonoBehaviour
     [Tooltip("Pause between loops (seconds).")]
     private float _pauseBetweenLoops = 0f;
 
-    /// A reference to the list returned in <see cref="GetValues"/> by the subclasses.
+    /// A reference to the list of values returned in <see cref="GetSteps"/> by the subclasses.
     private List<T> _values;
 
     #endregion
@@ -42,7 +42,7 @@ public abstract class BaseTweener<T> : MonoBehaviour
     private void Start()
     {
         Loops = 0;
-        _values = GetValues();
+        _values = GetSteps();
         StartCoroutine(DoTween());
     }
 
@@ -108,7 +108,7 @@ public abstract class BaseTweener<T> : MonoBehaviour
     /// Subclasses must override this method to return their own list of steps (values to interpolate in a loop).
     /// </summary>
     /// <return>List of steps (values to interpolate in a loop).</return>
-    protected abstract List<T> GetValues();
+    protected abstract List<T> GetSteps();
 
     /// <summary>
     /// Subclasses must override this method to manage the lerp from currentValue to nextValue.
